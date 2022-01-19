@@ -7,7 +7,7 @@ public class UsoAnnotations {
 
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("prueba/applicationContext.xml");
 	
-		Empleados Antonio = contexto.getBean("ComercialExperimentado", Empleados.class);
+		Empleados Antonio = contexto.getBean("comercialExperimentado", Empleados.class);
 		
 		System.out.println(Antonio.getInforme());
 		System.out.println(Antonio.getTareas());
