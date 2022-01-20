@@ -1,11 +1,29 @@
 package prueba;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+//import javax.annotation.PostConstruct;
+//import javax.annotation.PreDestroy;
+
 
 @Component
+@Scope("prototype")
 public class ComercialExperimentado implements Empleados {
 
+	//creacion del bean
+//	@PostConstruct
+//	public void ejecutaDespuesCreacion() {
+//		System.out.println("Ejecuta tras creacion de Bean");
+//	}
+//	
+//	//apagado contenedor spring
+//	@PreDestroy
+//	public void ejecutaAntesDestruccion() {
+//		System.out.println("Ejecuta antes de la destruccion");
+//	}
+	
 	public ComercialExperimentado() {
 		
 	}
@@ -34,6 +52,7 @@ public class ComercialExperimentado implements Empleados {
 	}
 	
 	@Autowired
+	@Qualifier("informeFinancieroTrim4")
 	private CreacionInformeFinanciero nuevoInforme;
 
 }

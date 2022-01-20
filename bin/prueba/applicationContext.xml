@@ -13,4 +13,5 @@
 
 	<context:component-scan base-package="prueba"></context:component-scan>
 
+
 </beans>
